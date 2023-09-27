@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(MaterialApp(
     home: Cities(),
-    theme: ThemeData(primarySwatch: Colors.red),
   ));
 }
 
@@ -60,8 +60,9 @@ class Cities extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: Colors.redAccent,
         title: Text('Cities around the world'),
+        centerTitle: true,
       ),
       body: ListView(
         children: List.generate(
@@ -69,15 +70,28 @@ class Cities extends StatelessWidget {
             (index) => Card(
                   child: Container(
                     color: Colors.orange,
-                    height: 100,
                     child: ListTile(
-                      leading: Image.asset(pics[index]),
+                      leading: Container(
+                        height: 100,
+                         width: 100,
+                         decoration: BoxDecoration(
+                             image: DecorationImage(fit: BoxFit.cover,
+                                 image: AssetImage(pics[index]))),
+                       ),
+
+
+
                       title: Text(names[index]),
-                      subtitle: Text(country[index]),
+                      subtitle: Column(
+                        children: [
+                          Text(country[index]
                     ),
+                          Text(population[index])
+                        ],
+                      ),
                   ),
                 )),
       ),
-    );
+    ));
   }
 }
