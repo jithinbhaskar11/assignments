@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -60,38 +60,44 @@ class Cities extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.redAccent,
-        title: Text('Cities around the world'),
-        centerTitle: true,
-      ),
-      body: ListView(
-        children: List.generate(
+        appBar: AppBar(
+          backgroundColor: Colors.redAccent,
+          title: Text('Cities around the world'),
+          centerTitle: true,
+        ),
+        body: ListView(
+          children: List.generate(
             10,
             (index) => Card(
-                  child: Container(
-                    color: Colors.orange,
-                    child: ListTile(
-                      leading: Container(
-                        height: 100,
-                         width: 100,
-                         decoration: BoxDecoration(
-                             image: DecorationImage(fit: BoxFit.cover,
-                                 image: AssetImage(pics[index]))),
-                       ),
-
-
-
-                      title: Text(names[index]),
-                      subtitle: Column(
-                        children: [
-                          Text(country[index]
+                child: Container(
+              height: 100,
+              color: Colors.orange,
+              child: ListTile(
+                leading: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.cover, image: AssetImage(pics[index]))),
+                ),
+                title: Text(
+                  names[index],
+                  style: GoogleFonts.roboto(),
+                ),
+                subtitle: Column(
+                  children: [
+                    Text(
+                      country[index],
+                      style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                     ),
-                          Text(population[index])
-                        ],
-                      ),
-                  ),
-                )),
-      ),
-    ));
+                    Text(
+                      population[index],
+                    )
+                  ],
+                ),
+              ),
+            )),
+          ),
+        ));
   }
 }
