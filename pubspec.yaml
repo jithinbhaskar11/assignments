@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/images/landscape/
 
 
   #   - images/a_dot_burr.jpeg

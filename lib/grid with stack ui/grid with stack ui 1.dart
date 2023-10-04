@@ -8,7 +8,8 @@ void main(){
 
 class Countries extends StatelessWidget {
 
-  var names=['India',
+  var names=[
+    'India',
   'U.S.A',
   'Russia',
   'Canada',
@@ -46,9 +47,9 @@ class Countries extends StatelessWidget {
             ),
             Positioned(
                 bottom: 20,
-                right: 140,
+                right: 110,
                 child: Container(
-                  child: Text(names[intex],style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.white, fontSize: 40,
+                  child: Text(names[intex],style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.white, fontSize: 30,
                       shadows:[Shadow(
                         color: Colors.black26,
                         offset: Offset(3, 3),
