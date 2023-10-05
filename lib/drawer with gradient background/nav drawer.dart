@@ -60,6 +60,33 @@ class Pichai extends StatelessWidget {
                 leading: Icon(Icons.subscriptions_sharp),
                 title: Text('Subscriptions'),
               ),
+              ListTile(
+                leading: Icon(Icons.waving_hand),
+                title: Text('Patients'),
+              ),
+              ListTile(
+                leading: Icon(Icons.payments_sharp),
+                title: Text('Payments'),
+              ),
+              ListTile(
+                leading: Icon(Icons.account_box),
+                title: Text('Users'),
+              ),
+              ListTile(
+                leading: Icon(Icons.library_books),
+                title: Text('Library'),
+              ),
+              SizedBox(height: 100,),
+              Container(
+                height: 30,
+                width: 200,
+                decoration: BoxDecoration(color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(45)
+                ),
+                child: Center(
+                  child: Text('Log Out'),
+                ),
+              )
             ],
           ),
         ),
