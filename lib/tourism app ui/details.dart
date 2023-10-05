@@ -15,6 +15,12 @@ class Details extends StatelessWidget {
       '2.9 million jobs (10.9% of employment) in the country.\n'
       'Tourism contributes significantly to the balance of payments.';
 
+  var visit = [
+    'assets/images/places sto vsist 3.jpeg',
+    'assets/images/places to visit 2.jpeg',
+    'assets/images/placses to visist 1.jpeg'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +29,8 @@ class Details extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 400.0),
             child: Container(
-              height: double.infinity,
-              width: double.infinity,
+              //height: double.infinity,
+             // width: double.infinity,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/images/eifell.jpeg'),
@@ -52,7 +58,35 @@ class Details extends StatelessWidget {
                   GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 20),
             ),
           ),
+          // GridView.builder(
+          //     itemCount: 3,
+          //     gridDelegate:
+          //         SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          //     itemBuilder: (context, index) {
+          //       return Positioned(
+          //         child: Stack(
+          //           children:[ Image.asset(
+          //             visit[index],
+          //           ),
+          //         ]),
+          //       );
+          //     }),
 
+          Positioned(
+            bottom: 10,
+            left: 100,
+            child: Container(
+              height: 50,
+              width: 500,
+              decoration: BoxDecoration(color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(45)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 150,top: 5),
+                child: Text('Press to explore', style: GoogleFonts.roboto(color: Colors.white,fontSize: 25),),
+              ),
+            ),
+          )
         ],
       ),
     );

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Status_screen(),
+    home: Call_screen(),
   ));
 }
 
-class Status_screen extends StatelessWidget {
+class Call_screen extends StatelessWidget {
   var names = [
     'Ammu',
     'Jabli',
