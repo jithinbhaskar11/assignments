@@ -40,25 +40,31 @@ class Profile_ui2 extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 100,right: 5),
-                  child: FaIcon(Icons.facebook,color: Colors.blue,),
+                  padding: const EdgeInsets.only(right: 10,left: 50),
+                  child: FaIcon(Icons.facebook,color: Colors.blue,size: 40,),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 5),
-                  child: FaIcon(FontAwesomeIcons.twitter, color: Colors.blue,),
+                  padding: const EdgeInsets.only(right: 10),
+                  child: FaIcon(FontAwesomeIcons.twitter, color: Colors.blue,size: 40,),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 5.0),
-                  child: FaIcon(FontAwesomeIcons.linkedin,color: Colors.blue,),
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: FaIcon(FontAwesomeIcons.linkedin,color: Colors.blue,size: 40,),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 5.0),
-                  child: FaIcon(FontAwesomeIcons.github),
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: FaIcon(FontAwesomeIcons.github,size: 40,),
                 )
               ],
             ),
-            Text('Robert Downey jr.',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-            Text('@rdj3000'),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text('Robert Downey jr.',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text('@rdj3000'),
+            ),
             Text('You know who i am',style: TextStyle(fontSize: 18),),
             SizedBox(height: 60,),
 
