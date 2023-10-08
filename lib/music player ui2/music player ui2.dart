@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -43,7 +44,7 @@ class _Music2State extends State<Music2> {
   ];
 
   var names=[
-    'Ranam title song',
+    'Ranam title track',
     'Unfinished hope',
     'Faya kun',
     'I want it that way',
@@ -52,6 +53,8 @@ class _Music2State extends State<Music2> {
     'Agar tum saath ho',
     'Let me down slowly'
   ];
+
+  int currentIndex=0;
 
   @override
   Widget build(BuildContext context) {
@@ -106,15 +109,47 @@ class _Music2State extends State<Music2> {
             children: List.generate(8, (index) => Padding(
               padding: const EdgeInsets.all(15.0),
               child: ListTile(
-                leading: Image.asset(sugg[index]),
-                title: Text(names[index],style: GoogleFonts.montserrat(color: Colors.pink[100]),),
+                leading: Container(height: 55,width: 55,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+                    image: DecorationImage(image: AssetImage(sugg[index]),fit: BoxFit.cover)
+                  ),
+                   // child: Image.asset(sugg[index])
+                ),
+                title: Text(names[index],style: GoogleFonts.montserrat(color: Colors.pink[100],fontWeight: FontWeight.bold),),
                 subtitle: Text(artist[index],style: TextStyle(color: Colors.white),),
-                trailing: Icon(Icons.star_border,color: Colors.pink[100],),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                  Icon(Icons.star_border_outlined,color: Colors.pink[100],),
+                  SizedBox(width: 60,),
+                  Icon(Icons.download_outlined,color:Colors.pink[100],)
+                ],),
               ),
             )),
           ),childCount: 1))
         ],
       ),
+      bottomNavigationBar: SalomonBottomBar(
+          currentIndex: currentIndex,
+          onTap: (i) => setState(() => currentIndex = i),
+          items: [
+            SalomonBottomBarItem(
+                icon: Icon(Icons.home,color: Colors.white,),
+                title: Text('Home'),
+                selectedColor: Colors.pink[100]),
+            SalomonBottomBarItem(
+                icon: Icon(Icons.search,color: Colors.white,),
+                title: Text('Search'),
+                selectedColor: Colors.pink[100]),
+            SalomonBottomBarItem(
+                icon: Icon(Icons.play_circle_sharp,color: Colors.white,),
+                title: Text('Playlist'),
+                selectedColor: Colors.pink[100]),
+            SalomonBottomBarItem(
+                icon: Icon(Icons.more_horiz,color: Colors.white,),
+                title: Text('Menu'),
+                selectedColor: Colors.pink[100])
+          ]),
     );
   }
 }
