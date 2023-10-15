@@ -88,11 +88,11 @@ class _MusicState extends State<Music> {
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: Container(
-                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30)),
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(45),
                                   child: Image.asset(playlist[index])),
-
                             ),
                           )))),
             ),
@@ -104,19 +104,31 @@ class _MusicState extends State<Music> {
           onTap: (i) => setState(() => currentIndex = i),
           items: [
             SalomonBottomBarItem(
-                icon: Icon(Icons.home,color: Colors.white,),
+                icon: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
                 title: Text('Home'),
                 selectedColor: Colors.pink[100]),
             SalomonBottomBarItem(
-                icon: Icon(Icons.search,color: Colors.white,),
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
                 title: Text('Search'),
                 selectedColor: Colors.pink[100]),
             SalomonBottomBarItem(
-                icon: Icon(Icons.play_circle_sharp,color: Colors.white,),
+                icon: Icon(
+                  Icons.play_circle_sharp,
+                  color: Colors.white,
+                ),
                 title: Text('Playlist'),
                 selectedColor: Colors.pink[100]),
             SalomonBottomBarItem(
-                icon: Icon(Icons.more_horiz,color: Colors.white,),
+                icon: Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                ),
                 title: Text('Menu'),
                 selectedColor: Colors.pink[100])
           ]),
