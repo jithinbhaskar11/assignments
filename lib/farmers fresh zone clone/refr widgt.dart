@@ -6,7 +6,7 @@ class Ref_widget_ffz extends StatelessWidget {
   String? price;
   String? qty;
   ElevatedButton? elevatedButton;
-  String? add;
+  // String? add;
   VoidCallback? click;
 
   Ref_widget_ffz({
@@ -15,10 +15,10 @@ class Ref_widget_ffz extends StatelessWidget {
     required this.price,
     required this.qty,
     required this.elevatedButton,
-    required this.add,
+    // required this.add,
     required this.click
 
-});
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -51,8 +51,8 @@ class Ref_widget_ffz extends StatelessWidget {
               SizedBox(width: 400,),
               Padding(
                 padding: const EdgeInsets.only(bottom: 10.0),
-                child: ElevatedButton( onPressed: (){}, child: Text(add!, style: TextStyle(fontWeight: FontWeight.bold),),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),),
+                child: ElevatedButton( onPressed: (){}, child: Text('ADD', style: TextStyle(fontWeight: FontWeight.bold),),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.green),),
               )
             ],
           ),

@@ -49,16 +49,18 @@ class _Home_ffzState extends State<Home_ffz> {
             backgroundColor: Colors.greenAccent[700],
             pinned: false,
             floating: true,
-            title: Text('FARMERS FRESH ZONE', style: GoogleFonts.mohave(fontWeight: FontWeight.bold),),
+            title: Text('FARMERS FRESH ZONE',
+              style: GoogleFonts.mohave(fontWeight: FontWeight.bold),),
             actions: [Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(children: [
                 Icon(Icons.location_on_outlined),
                 SizedBox(width: 5,),
-                Text('Kochi' ,style: TextStyle(fontSize: 18),),
+                Text('Kochi', style: TextStyle(fontSize: 18),),
                 Icon(Icons.keyboard_arrow_down)
               ],),
-            )],
+            )
+            ],
 
             bottom: AppBar(
               backgroundColor: Colors.greenAccent[700],
@@ -68,122 +70,120 @@ class _Home_ffzState extends State<Home_ffz> {
                 ),
                 child: TextField(
                   decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    hintText: 'Sarch for Vegetables, Fruits..',
-                    prefixIcon: Icon(Icons.search)
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      hintText: 'Sarch for Vegetables, Fruits..',
+                      prefixIcon: Icon(Icons.search)
                   ),
                 ),
               ),
             ),
           ),
-        ///***************************
-        // SliverToBoxAdapter(
-        //   child: SingleChildScrollView(
-        //     child: Row(
-        //       children: List.generate(8, (index) => Expanded(
-        //         child: Container(width: 100,
-        //           child: TextField(
-        //             decoration: InputDecoration(
-        //               border: OutlineInputBorder(),
-        //               hintText: titles[index]
-        //             ),
-        //           ),
-        //         ),
-        //       )),
-        //     ),
-        //   ),
-        // ),
+
+          ///***************************
 
           SliverList(
-            delegate: SliverChildBuilderDelegate((context, index) =>
-              CarouselSlider(items: [
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage('assets/images/ff1.jpg'),
-                    fit: BoxFit.cover)
+              delegate: SliverChildBuilderDelegate((context, index) =>
+                  Container(
+                    child: CarouselSlider(items: [
+                      Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(image: AssetImage(
+                                'assets/images/ff1.jpg'),
+                                fit: BoxFit.cover)
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(image: AssetImage(
+                                'assets/images/ff2.jpg'),
+                                fit: BoxFit.cover)
+                        ),
+                      )
+                    ], options: CarouselOptions(
+                        autoPlay: true,
+                        viewportFraction: 1,
+                        height: 200,
+                        enableInfiniteScroll: true,
+                        autoPlayAnimationDuration: Duration(seconds: 2)
+                    )),
                   ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage('assets/images/ff2.jpg'),
-                    fit: BoxFit.cover)
-                  ),
-                )
-              ], options: CarouselOptions(
-                autoPlay: true,
-                viewportFraction: 1,
-                height: 200,
-                enableInfiniteScroll: true,
-                autoPlayAnimationDuration: Duration(seconds: 2)
-              )),
-              childCount: 1
-            )
+                  childCount: 1
+              )
           ),
-          SliverList(delegate: SliverChildBuilderDelegate(childCount: 1,(context, index) => Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: 100,
-              width: 250,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.green),
-                borderRadius: BorderRadius.circular(10)
-              ),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30,right: 15),
-                    child: Container(
-                    height: 100,width: 75,
-                    decoration: BoxDecoration(
-                    ),
-                    child: Column(
-                      children: [
-                        Image(image: NetworkImage('https://media.istockphoto.com/id/530349577/photo/30-minutes-30-seconds-6-hours.jpg?s=2048x2048&w=is&k=20&c=F45nQAafEzNAoiCNr3zq_XgrZ3U4kaTSfa1Bgm9hHyg=')),
-                        Text('30 MINS POLICY',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
-                      ],
-                    ),
-                ),
+          SliverList(delegate: SliverChildBuilderDelegate(
+              childCount: 1, (context, index) =>
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  height: 100,
+                  width: 250,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.green),
+                      borderRadius: BorderRadius.circular(10)
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 60,right: 15),
-                    child: Container(
-                      height: 70,width: 75,
-                      decoration: BoxDecoration(
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 15),
+                        child: Container(
+                          height: 100, width: 75,
+                          decoration: BoxDecoration(
+                          ),
+                          child: Column(
+                            children: [
+                              Image(image: NetworkImage(
+                                  'https://media.istockphoto.com/id/530349577/photo/30-minutes-30-seconds-6-hours.jpg?s=2048x2048&w=is&k=20&c=F45nQAafEzNAoiCNr3zq_XgrZ3U4kaTSfa1Bgm9hHyg=')),
+                              Text('30 MINS POLICY', style: TextStyle(
+                                  fontSize: 10, fontWeight: FontWeight.bold),)
+                            ],
+                          ),
+                        ),
                       ),
-                      child: Column(
-                        children: [
-                          Image(image: NetworkImage('https://media.istockphoto.com/id/1349047104/photo/cartoon-character-hand-holds-smart-phone.jpg?s=2048x2048&w=is&k=20&c=lT39XlN1XBLJ1kYk0JsOIuH4cqWP-3rMtzsa3nmBIXE=')),
-                          Text('TRACEABILITY',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 60, right: 15),
+                        child: Container(
+                          height: 70, width: 75,
+                          decoration: BoxDecoration(
+                          ),
+                          child: Column(
+                            children: [
+                              Image(image: NetworkImage(
+                                  'https://media.istockphoto.com/id/1349047104/photo/cartoon-character-hand-holds-smart-phone.jpg?s=2048x2048&w=is&k=20&c=lT39XlN1XBLJ1kYk0JsOIuH4cqWP-3rMtzsa3nmBIXE=')),
+                              Text('TRACEABILITY', style: TextStyle(
+                                  fontSize: 10, fontWeight: FontWeight.bold),)
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 80,),
-                    child: Container(
-                      height: 90,width: 75,
-                      decoration: BoxDecoration(
-                      ),
-                      child: Column(
-                        children: [
-                          Image(image: NetworkImage('https://media.istockphoto.com/id/928726496/vector/child-farmer.jpg?s=2048x2048&w=is&k=20&c=T2K2D3JUeLUBSo3hE26F9V7cCbpnoxwRhZ5MQxtSSns=')),
-                          Text('LOCAL SOURCING',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 8),)
-                        ],
-                      ),
-                    ),
-                  )
-                ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 80,),
+                        child: Container(
+                          height: 90, width: 75,
+                          decoration: BoxDecoration(
+                          ),
+                          child: Column(
+                            children: [
+                              Image(image: NetworkImage(
+                                  'https://media.istockphoto.com/id/928726496/vector/child-farmer.jpg?s=2048x2048&w=is&k=20&c=T2K2D3JUeLUBSo3hE26F9V7cCbpnoxwRhZ5MQxtSSns=')),
+                              Text('LOCAL SOURCING', style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 8),)
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
 
-              ),
-            ),
-          ))),
+                  ),
+                ),
+              ))),
           SliverToBoxAdapter(child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Shop by category',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text('Shop by category',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
           ),),
           SliverList(
             delegate: SliverChildBuilderDelegate(
@@ -195,12 +195,14 @@ class _Home_ffzState extends State<Home_ffz> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
                     ),
-                    itemCount: 8, // Number of images
+                    itemCount: 8,
+                    // Number of images
                     itemBuilder: (BuildContext context, int gridIndex) {
                       return Card(
                         child: Column(
                           children: [
-                            Image.network(img[gridIndex]), // Use different image URLs
+                            Image.network(img[gridIndex]),
+                            // Use different image URLs
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(titles[gridIndex]),
@@ -217,27 +219,26 @@ class _Home_ffzState extends State<Home_ffz> {
               childCount: 1, // You only want one GridView
             ),
           ),
-          SliverList(delegate: SliverChildBuilderDelegate(childCount: 1,(context, index) => Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage('assets/images/know your farmer.jpg'),
-                fit: BoxFit.cover)
-              ),
-            ),
-          ))),
-          ///***************
-          //SliverList(delegate: delegate)
-          // SliverList(delegate: SliverChildBuilderDelegate((context, index) => Ref_widget_ffz(
-          //     image: NetworkImage('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'),
-          //     name: 'name',
-          //     price: '50',
-          //     qty: '5',
-          //     elevatedButton: ElevatedButton(onPressed: (){}, child: Text('ADD')),
-          //     click: (){}, add: 'ADD',)))
-        ]  ),
+          SliverList(delegate: SliverChildBuilderDelegate(
+              childCount: 1, (context, index) =>
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 200,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(
+                          'assets/images/know your farmer.jpg'),
+                          fit: BoxFit.cover)
+                  ),
+                ),
+              ))),
+
+          ///****
+
+        ],
+      ),
     );
-  }
-}
+  }}
+
+
