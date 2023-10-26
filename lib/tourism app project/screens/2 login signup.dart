@@ -1,7 +1,19 @@
-import 'package:assignment/login%20and%20signup%20ui/sign%20in%20page.dart';
-import 'package:assignment/login%20and%20signup%20ui/sign%20up%20page.dart';
+
+import 'package:assignment/tourism%20app%20project/screens/3%20login%20screen.dart';
+import 'package:assignment/tourism%20app%20project/screens/4%20sign%20up%20screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../login and signup ui/sign in page.dart';
+import '../../login and signup ui/sign up page.dart';
+
+
+
+void main(){
+  runApp(MaterialApp(
+    home: Login_signup(),
+  ));
+}
 
 class Login_signup extends StatelessWidget {
   const Login_signup({super.key});
@@ -17,7 +29,7 @@ class Login_signup extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 5),
               child: MaterialButton(onPressed: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Sign_in_page()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Tour_Signin()));
               },
               color: Colors.lightBlueAccent,
                 child: ListTile(
@@ -32,7 +44,7 @@ class Login_signup extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 5),
               child: MaterialButton(onPressed: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Sign_up()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Tour_Sign_up()));
               },
                 color: Colors.green,
                 child: ListTile(

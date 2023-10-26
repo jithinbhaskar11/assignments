@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:assignment/tourism%20app%20project/screens/2%20login%20signup.dart';
 import 'package:assignment/tourism%20app%20project/screens/3%20login%20screen.dart';
 import 'package:assignment/tourism%20app%20project/screens/4%20sign%20up%20screen.dart';
@@ -12,6 +11,7 @@ void main(){
   runApp(MaterialApp(
     home: Introscreen(),
     routes: {
+      'login signup':(context)=>Login_signup(),
        'login':(context)=>Tour_Signin(),
        'register':(context)=>Tour_Sign_up(),
        'home':(context)=>Tour_Home(),
@@ -32,12 +32,13 @@ class Introscreen extends StatefulWidget {
 class _IntroscreenState extends State<Introscreen> {
   @override
   void initState(){
-    Timer(Duration(seconds: 2), () {
-      Navigator.of(context).pushNamed('login');
+    Timer(Duration(seconds: 3), () {
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Login_signup()));
     });
   }
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white ,
       body: Center(
         child: Image.asset('assets/images/tourism logo2.png'),
       ),

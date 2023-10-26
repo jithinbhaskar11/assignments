@@ -90,7 +90,9 @@ class _Tour_SigninState extends State<Tour_Signin> {
                 height: 60,
                 width: 1000,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('home');
+                  },
                   child: Text('Login'),
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,

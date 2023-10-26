@@ -97,14 +97,14 @@ class _Tour_Sign_upState extends State<Tour_Sign_up> {
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, bottom: 20, top: 15),
                 child: TextFormField(
-                  validator: (cpassword) {
-                    cpass = cpassword;
-                    if (cpassword!.isEmpty || cpassword != pass) {
-                      return 'password must be same';
-                    } else {
-                      return null;
-                    }
-                  },
+                  // validator: (cpassword) {
+                  //   cpass = cpassword;
+                  //   if (cpassword!.isEmpty || cpassword != pass) {
+                  //     return 'password must be same';
+                  //   } else {
+                  //     return null;
+                  //   }
+                  // },
                   decoration: InputDecoration(
                       suffixIcon: IconButton(
                           onPressed: () {
@@ -134,11 +134,8 @@ class _Tour_Sign_upState extends State<Tour_Sign_up> {
                 width: 1000,
                 child: ElevatedButton(
                     onPressed: () {
-                      final valid = formkey.currentState!.validate();
-                      if (valid) {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => Tour_Signin()));
-                      }
+                        Navigator.of(context).pushNamed('login');
+
                     },
                     child: Text(
                       'Sign Up',
