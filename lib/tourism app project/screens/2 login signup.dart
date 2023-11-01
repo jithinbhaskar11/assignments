@@ -4,8 +4,6 @@ import 'package:assignment/tourism%20app%20project/screens/4%20sign%20up%20scree
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../login and signup ui/sign in page.dart';
-import '../../login and signup ui/sign up page.dart';
 
 
 

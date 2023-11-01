@@ -123,7 +123,7 @@ class Tour_details extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: GestureDetector(
-                onTap: ()=>Navigator.of(context).pushNamed('explore'),
+                onTap: ()=>Navigator.of(context).pushNamed('explore',arguments: id),
                 child: Container(
                   height: 40,
                   width: 450,

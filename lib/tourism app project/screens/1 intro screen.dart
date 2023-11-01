@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:assignment/hotel%20details%20ui/hotel%20details%20ui.dart';
 import 'package:assignment/tourism%20app%20project/screens/2%20login%20signup.dart';
 import 'package:assignment/tourism%20app%20project/screens/3%20login%20screen.dart';
 import 'package:assignment/tourism%20app%20project/screens/4%20sign%20up%20screen.dart';
@@ -16,8 +17,8 @@ void main(){
        'register':(context)=>Tour_Sign_up(),
        'home':(context)=>Tour_Home(),
       'details':(context)=> Tour_details(),
-       'explore':(context)=>Tour_Explore(),
-       'payment':(context)=>Tour_Payment()
+       'explore':(context)=> Tour_Explore(),
+       'pay':(context)=>Tour_Payment()
     }
   ));
 }
