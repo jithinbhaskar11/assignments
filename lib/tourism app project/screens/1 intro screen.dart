@@ -8,6 +8,8 @@ import 'package:assignment/tourism%20app%20project/screens/6%20details%20screen.
 import 'package:assignment/tourism%20app%20project/screens/7%20explore%20now%20screen.dart';
 import 'package:assignment/tourism%20app%20project/screens/8%20payments%20screen.dart';
 import 'package:flutter/material.dart';
+
+import '9 paymentdone.dart';
 void main(){
   runApp(MaterialApp(
     home: Introscreen(),
@@ -18,7 +20,8 @@ void main(){
        'home':(context)=>Tour_Home(),
       'details':(context)=> Tour_details(),
        'explore':(context)=> Tour_Explore(),
-       'pay':(context)=>Tour_Payment()
+       'pay':(context)=>Tour_Payment(),
+      'paydone':(context)=>Payment_done()
     }
   ));
 }
